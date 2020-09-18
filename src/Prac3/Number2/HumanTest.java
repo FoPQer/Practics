@@ -20,7 +20,8 @@ public class HumanTest
                     "4.Заставим персонажа пробежаться\n" +
                     "5.Накачаем персонажа\n" +
                     "6.Отрастим ему конечности\n" +
-                    "7.Закончим работу");
+                    "7.Посмотрим его параметры\n" +
+                    "8.Закончим работу");
             int chek = sc.nextInt();
             switch (chek) {
                 case 1:
@@ -34,18 +35,27 @@ public class HumanTest
                         case 1:
                             System.out.println("Введите новое имя персонажа");
                             myCharacter.setName();
+                            System.out.println("Теперь персонажа зовут " + myCharacter.name);
                             break;
                         case 2:
                             System.out.println("Введите новый возраст персонажа");
                             myCharacter.setOld();
+                            if (myCharacter.old % 10 == 1)
+                                System.out.println("Теперь персонажу " + myCharacter.old + " годик");
+                            if ((myCharacter.old % 10 >= 2) & (myCharacter.old % 10 <= 4))
+                                System.out.println("Теперь персонажу " + myCharacter.old + " годика");
+                            if (myCharacter.old % 10 >= 5 || myCharacter.old % 10 == 0)
+                                System.out.println("Теперь персонажу " + myCharacter.old + " годиков");
                             break;
                         case 3:
                             System.out.println("Введите новую массу тела персонажа");
                             myBody.setMas();
+                            System.out.println("Теперь масса персонажа " + myBody.mas + " кг");
                             break;
                         case 4:
                             System.out.println("Введите новый рост персонажа");
                             myBody.setLng();
+                            System.out.println("Теперь рост персонажа " + " см");
                             break;
                         default:
                             System.out.println("Данные не верны, значит оставим как есть");
@@ -114,10 +124,14 @@ public class HumanTest
                     }
                     break;
                 case 7:
+                    myCharacter.resume();
+                    System.out.println("Я вешу " + myBody.mas + ", мой рост " + myBody.lng + ", мой iq " + myHead.iq + ", у меня " + myHand.quantity + " руки и " + myLeg.quantity + " ноги, я бегаю со скоростью " + myLeg.speed + " м/с, я накачан на " + myHand.pump + " процентов, это всё обо мне");
+                    break;
+                case 8:
                     System.out.println("Приятно было поработать с вами)");
                     return;
                 default:
-                    System.out.println("Закрою глаза на это и просто посчитаю что вы промахнулись по цифре 7, до свидания!");
+                    System.out.println("Закрою глаза на это и просто посчитаю что вы промахнулись по цифре 8, до свидания!");
                     return;
             }
         }

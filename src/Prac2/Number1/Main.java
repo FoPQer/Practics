@@ -18,12 +18,15 @@ public class Main
             System.out.println("Еще фигуру?(1 да, 0 нет)");
             sup = sc.nextInt();
             switch (sup) {
-                case 0 -> more = false;
-                case 1 -> more = true;
-                default -> {
+                case 0:
+                    more = false;
+                    break;
+                case 1:
+                    more = true;
+                    break;
+                default:
                     System.out.println("Введено не верное значение, будем считать, что мы закончили");
                     more = false;
-                }
             }
         }
         for (int j = 0; j < i; j++)

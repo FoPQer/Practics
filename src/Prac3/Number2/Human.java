@@ -13,7 +13,6 @@ public class Human
         setName();
         System.out.println("Введите возраст персонажа");
         setOld();
-        resume();
     }
     public void setName()
     {
@@ -35,7 +34,7 @@ public class Human
     {
         if (old % 10 == 1)
             System.out.println("Меня зовут " + name + ", мне " + old + " годик");
-        if ((old % 10 >= 1) & (old % 10 <= 4))
+        if ((old % 10 >= 2) & (old % 10 <= 4))
             System.out.println("Меня зовут " + name + ", мне " + old + " годика");
         if (old % 10 >= 5 || old % 10 == 0)
             System.out.println("Меня зовут " + name + ", мне " + old + " годиков");

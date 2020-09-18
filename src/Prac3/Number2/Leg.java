@@ -12,6 +12,7 @@ public class Leg
         System.out.println("Введите количество ног вашего персонажа");
         setQuantity();
         System.out.println("Введите скорость вашего персонажа в м/с");
+        setSpeed();
     }
     public void setQuantity()
     {

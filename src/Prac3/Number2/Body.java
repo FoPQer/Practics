@@ -9,9 +9,9 @@ public class Body
     int lng;
     Body()
     {
-        System.out.println("Введите массу тела персонажа");
+        System.out.println("Введите массу тела персонажа в кг");
         setMas();
-        System.out.println("Введите рост персонажа");
+        System.out.println("Введите рост персонажа в см");
         setLng();
     }
     public void setMas()
