@@ -26,7 +26,9 @@ public class Head
     }
     void say()
     {
-        String phrase = sc.nextLine();
+        System.out.println("Что персонаж скажет?");
+        String phrase;
+        phrase = sc.nextLine();
         System.out.println("Персонаж сказал: " + phrase);
     }
 }
