@@ -11,7 +11,7 @@ public class Body
     {
         System.out.println("Введите массу тела персонажа");
         setMas();
-        System.out.println("Введите рост тела персонажа");
+        System.out.println("Введите рост персонажа");
         setLng();
     }
     public void setMas()
