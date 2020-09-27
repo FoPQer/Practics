@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MovableRectangle implements Movable{
     int[] side = new int[2];
     private float x1, y1, x2, y2, sup;
-    String turn;
+    private String turn;
     Scanner sc = new Scanner(System.in);
     MovableRectangle()
     {

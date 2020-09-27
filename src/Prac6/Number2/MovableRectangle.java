@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MovableRectangle implements Movable
 {
     private float x, y, sup;
-    String turn;
+    private String turn;
     MovableRectangle()
     {
         System.out.println("Введите координаты центра прямоугольника");
