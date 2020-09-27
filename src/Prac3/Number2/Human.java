@@ -6,14 +6,22 @@ public class Human
 {
     String name;
     int old;
-    Scanner sc = new Scanner(System.in);
+    Body myBody;
+    Head myHead;
+    Leg myLeg;
+    Hand myHand;
     Human()
     {
         System.out.println("Введите имя персонажа");
         setName();
         System.out.println("Введите возраст персонажа");
         setOld();
+        myBody = new Body();
+        myHead = new Head();
+        myLeg = new Leg();
+        myHand = new Hand();
     }
+    Scanner sc = new Scanner(System.in);
     public void setName()
     {
         name = sc.nextLine();

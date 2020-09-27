@@ -8,10 +8,6 @@ public class HumanTest
     {
         Scanner sc = new Scanner(System.in);
         Human myCharacter = new Human();
-        Body myBody = new Body();
-        Head myHead = new Head();
-        Leg myLeg = new Leg();
-        Hand myHand = new Hand();
         while (true) {
             System.out.println("Давайте решим что делать с персонажем:\n" +
                     "1.Изменим его параметры\n" +
@@ -49,12 +45,12 @@ public class HumanTest
                             break;
                         case 3:
                             System.out.println("Введите новую массу тела персонажа");
-                            myBody.setMas();
-                            System.out.println("Теперь масса персонажа " + myBody.mas + " кг");
+                            myCharacter.myBody.setMas();
+                            System.out.println("Теперь масса персонажа " + myCharacter.myBody.mas + " кг");
                             break;
                         case 4:
                             System.out.println("Введите новый рост персонажа");
-                            myBody.setLng();
+                            myCharacter.myBody.setLng();
                             System.out.println("Теперь рост персонажа " + " см");
                             break;
                         default:
@@ -70,13 +66,13 @@ public class HumanTest
                     int chek3 = sc.nextInt();
                     switch (chek3) {
                         case 1:
-                            myBody.sit();
+                            myCharacter.myBody.sit();
                             break;
                         case 2:
-                            myBody.stay();
+                            myCharacter.myBody.stay();
                             break;
                         case 3:
-                            myBody.lay();
+                            myCharacter.myBody.lay();
                             break;
                         default:
                             System.out.println("Персонаж такого не умеет, он отказывается что либо делать");
@@ -90,11 +86,10 @@ public class HumanTest
                     int chek4 = sc.nextInt();
                     switch (chek4) {
                         case 1:
-                            myHead.teach();
+                            myCharacter.myHead.teach();
                             break;
                         case 2:
-                            System.out.println("Что персонаж скажет?");
-                            myHead.say();
+                            myCharacter.myHead.say();
                             break;
                         default:
                             System.out.println("Голова разболелась от такого количества информации");
@@ -102,10 +97,10 @@ public class HumanTest
                     }
                     break;
                 case 4:
-                    myLeg.run();
+                    myCharacter.myLeg.run();
                     break;
                 case 5:
-                    myHand.pumpUp();
+                    myCharacter.myHand.pumpUp();
                     break;
                 case 6:
                     System.out.println("Что отращиваем?\n" +
@@ -114,10 +109,10 @@ public class HumanTest
                     int chek5 = sc.nextInt();
                     switch (chek5) {
                         case 1:
-                            myHand.mutation();
+                            myCharacter.myHand.mutation();
                             break;
                         case 2:
-                            myLeg.mutation();
+                            myCharacter.myLeg.mutation();
                             break;
                         default:
                             System.out.println("Ухади, такое нельзя трогать");
@@ -125,7 +120,7 @@ public class HumanTest
                     break;
                 case 7:
                     myCharacter.resume();
-                    System.out.println("Я вешу " + myBody.mas + ", мой рост " + myBody.lng + ", мой iq " + myHead.iq + ", у меня " + myHand.quantity + " руки и " + myLeg.quantity + " ноги, я бегаю со скоростью " + myLeg.speed + " м/с, я накачан на " + myHand.pump + " процентов, это всё обо мне");
+                    System.out.println("Я вешу " + myCharacter.myBody.mas + ", мой рост " + myCharacter.myBody.lng + ", мой iq " + myCharacter.myHead.iq + ", у меня " + myCharacter.myHand.quantity + " руки и " + myCharacter.myLeg.quantity + " ноги, я бегаю со скоростью " + myCharacter.myLeg.speed + " м/с, я накачан на " + myCharacter.myHand.pump + " процентов, это всё обо мне");
                     break;
                 case 8:
                     System.out.println("Приятно было поработать с вами)");
