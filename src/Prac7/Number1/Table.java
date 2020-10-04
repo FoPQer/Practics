@@ -28,6 +28,8 @@ public class Table extends Furniture
     }
     Table(){
         Scanner sc = new Scanner(System.in);
+        setNames();
+        setColors();
         setName(names[(int)Math.random()]);
         setColor(colors[(int)Math.random()]);
         setCost(Math.random()*2000);
