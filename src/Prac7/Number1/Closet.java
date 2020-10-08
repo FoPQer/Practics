@@ -28,12 +28,12 @@ public class Closet extends Furniture
         names[9] = "Хауга";
     }
     Closet(){
-        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
         setNames();
         setColors();
-        setName(names[(int)Math.random()]);
-        setColor(colors[(int)Math.random()]);
-        setCost(Math.random()*1000);
+        setName(names[rand.nextInt(10)]);
+        setColor(colors[rand.nextInt(4)]);
+        setCost(rand.nextDouble()*1000);
     }
     @Override
     public void setName(String name) {

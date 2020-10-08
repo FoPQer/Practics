@@ -1,5 +1,6 @@
 package Prac7.Number1;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Table extends Furniture
@@ -27,12 +28,12 @@ public class Table extends Furniture
         names[9] = "Витшё";
     }
     Table(){
-        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
         setNames();
         setColors();
-        setName(names[(int)Math.random()]);
-        setColor(colors[(int)Math.random()]);
-        setCost(Math.random()*2000);
+        setName(names[rand.nextInt(10)]);
+        setColor(colors[rand.nextInt(4)]);
+        setCost(rand.nextDouble()*2000);
     }
     @Override
     public void setName(String name) {
