@@ -13,8 +13,7 @@ public class Picture extends JFrame
         frm.setBounds(300,300,400,400);
         frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frm.setLayout(null);
-        JViewport view = new JViewport();
-        view.getView();
+        ImageIcon image = new ImageIcon("")
         frm.setVisible(true);
     }
 
