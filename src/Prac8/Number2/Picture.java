@@ -1,27 +1,18 @@
 package Prac8.Number2;
 
-import javax.swing.*;
 import java.awt.*;
-public class Picture extends  JFrame {
-    public static void main (String[] args) {
-        Picture main = new Picture();
-        main.go();
+import javax.swing.*;
+
+public class Picture extends JPanel{
+    public static void main(String[] args) {
+        JFrame fr = new JFrame();
+        fr.setSize(1800, 800);
+        fr.setVisible(true);
+        fr.add(new Picture());
+        fr.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
-
-    public void go () {
-        JFrame frame = new JFrame();
-        MyDrawPanel panel = new MyDrawPanel();
-
-        frame.getContentPane().add(panel);
-
-        frame.setSize(300, 300);
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
-}
-class MyDrawPanel extends JPanel {
-    public void paintComponent (Graphics g) {
-        Image image = new ImageIcon("D:\\Picture").getImage();
-        g.drawImage(image, 3, 4, this);
+    public void paint(Graphics g){
+        Image img = new ImageIcon("D:\\Picture.jpg").getImage();
+        g.drawImage(img, 0, 0, null);
     }
 }

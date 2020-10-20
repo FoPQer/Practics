@@ -6,7 +6,7 @@ public class Main
     public static void main(String[] args)
     {
         //Выбери один из способов рандома путем закомменчивания не нужного способа
-        rand1();           //Это Random
+        //rand1();           //Это Random
         rand2();           //Это Math.random()
         System.out.println("Вывод массива");
         out();
