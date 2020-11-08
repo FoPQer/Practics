@@ -1,8 +1,5 @@
 package Prac9;
 
-import Prac9.Circle;
-import Prac9.Rectangle;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

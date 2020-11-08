@@ -5,7 +5,11 @@ import java.util.Scanner;
 public class OutZero
 {
     public static int main(String[] args) {
-        int a, b, zero[], ia, ib;
+        int a;
+        int b;
+        int[] zero;
+        int ia;
+        int ib;
         Scanner sc = new Scanner(System.in);
         a = sc.nextInt();
         b = sc.nextInt();
