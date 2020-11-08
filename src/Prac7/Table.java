@@ -1,7 +1,6 @@
-package Prac7.Number1;
+package Prac7;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Table extends Furniture
 {

@@ -1,4 +1,4 @@
-package Prac7.Number1;
+package Prac7;
 
 public class FurnitureShop
 {

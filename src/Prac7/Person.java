@@ -1,4 +1,4 @@
-package Prac7.Number1;
+package Prac7;
 
 import java.util.Arrays;
 import java.util.Random;
