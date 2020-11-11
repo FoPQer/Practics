@@ -1,11 +1,7 @@
 package Prac17;
 
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Random;
@@ -32,19 +28,24 @@ public class GUIMyGame extends JFrame {
         @Override
         public void keyPressed(KeyEvent e) {
             if (KeyEvent.VK_UP == e.getKeyCode()) {
-                snake.setPosition(snake.getPositionX(), snake.getPositionY() + 1);
+                snake.setPosition(snake.getPositionX(), snake.getPositionY() - 2);
+
+                repaint(2);
                 System.out.println(snake.getPositionX() + " " + snake.getPositionY());
             }
             if (KeyEvent.VK_DOWN == e.getKeyCode()) {
-                snake.setPosition(snake.getPositionX(), snake.getPositionY()-1);
+                snake.setPosition(snake.getPositionX(), snake.getPositionY()+2);
+                repaint(2);
                 System.out.println(snake.getPositionX() + " " + snake.getPositionY());
             }
             if (KeyEvent.VK_RIGHT == e.getKeyCode()) {
-                snake.setPosition(snake.getPositionX()+1, snake.getPositionY());
+                snake.setPosition(snake.getPositionX()+2, snake.getPositionY());
+                repaint(2);
                 System.out.println(snake.getPositionX() + " " + snake.getPositionY());
             }
             if (KeyEvent.VK_LEFT == e.getKeyCode()) {
-                snake.setPosition(snake.getPositionX()-1, snake.getPositionY());
+                snake.setPosition(snake.getPositionX()-2, snake.getPositionY());
+                repaint(2);
                 System.out.println(snake.getPositionX() + " " + snake.getPositionY());
             }
         }
