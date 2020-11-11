@@ -20,35 +20,45 @@ public class GamePian {
     void turn()
     {
         if(second.equals("") || first.equals("")) {
-            if(second.equals("")) {
-                System.out.println("first" + turnSum);
-                isWinner = true;
-            }
-            if(first.equals("")) {
-                System.out.println("second" + turnSum);
-                isWinner = true;
-            }
+            if(second.equals(""))
+                System.out.println("first " + turnSum);
+            if(first.equals(""))
+                System.out.println("second " + turnSum);
+            isWinner = true;
         } else {
             turnSum++;
-            if ((first.charAt(0) > second.charAt(0)) || first.charAt(0) == '0') {
-                first += first.charAt(0);
-                first += second.charAt(0);
-                System.out.println("turn " + turnSum + " " + first + ", " + second);
+            if (chekNull()) {
+                if (first.charAt(0) < second.charAt(0)) {
+                    first += first.charAt(0);
+                    first += second.charAt(0);
+                } else {
+                    second += first.charAt(0);
+                    second += second.charAt(0);
+                }
+            } else {
+                if (first.charAt(0) > second.charAt(0)) {
+                    first += first.charAt(0);
+                    first += second.charAt(0);
+                } else {
+                    second += first.charAt(0);
+                    second += second.charAt(0);
+                }
             }
-            if ((first.charAt(0) < second.charAt(0)) || second.charAt(0) == '0') {
-                second += first.charAt(0);
-                second += second.charAt(0);
-                System.out.println("turn " + turnSum + " " + first + ", " + second);
-            }
+            first = push(first);
+            second = push(second);
         }
     }
 
-    void push(String line)
+    String push(String line)
     {
-        int size = line.length();
-        String supLine = "";
-        for (int i = 1; i < size; i++)
-            supLine += line.charAt(i);
+        StringBuilder supLine = new StringBuilder();
+        for (int i = 1; i < line.length(); i++)
+            supLine.append(line.charAt(i));
+        return supLine.toString();
+    }
+
+    boolean chekNull() {
+        return (first.charAt(0) == '0') || (second.charAt(0) == '0');
     }
 
     GamePian()

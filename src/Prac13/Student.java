@@ -1,4 +1,4 @@
-package Prac13.Number1;
+package Prac13;
 
 import java.util.Scanner;
 
