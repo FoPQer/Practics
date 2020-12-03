@@ -11,7 +11,7 @@ public class GUIMyGame extends JFrame {
     int i = 0;
     Random rand = new Random();
     MyGame snake = new MyGame(255, 255);
-    MyGame point = new MyGame(rand.nextInt(506) + 1, rand.nextInt(500) + 10);
+    MyGame point = new MyGame(rand.nextInt(506) + 2, rand.nextInt(495) + 10);
     GUIMyGame() {
         super("ИграПоймай-ка");
         setBounds(200,200,510,510);
@@ -35,7 +35,7 @@ public class GUIMyGame extends JFrame {
                 repaint();
                 if(catched()) {
                     GUIMyGame.super.getGraphics().clearRect(0, 0, 510, 510);
-                    point.setPosition(rand.nextInt(506) + 2, rand.nextInt(500) + 10);
+                    point.setPosition(rand.nextInt(506) + 2, rand.nextInt(495) + 10);
                     repaint();
                 }
             }
@@ -44,7 +44,7 @@ public class GUIMyGame extends JFrame {
                 repaint();
                 if(catched()) {
                     GUIMyGame.super.getGraphics().clearRect(0, 0, 510, 510);
-                    point.setPosition(rand.nextInt(506) + 2, rand.nextInt(500) + 10);
+                    point.setPosition(rand.nextInt(506) + 2, rand.nextInt(495) + 10);
                     repaint();
                 }
             }
@@ -53,7 +53,7 @@ public class GUIMyGame extends JFrame {
                 repaint();
                 if(catched()) {
                     GUIMyGame.super.getGraphics().clearRect(0, 0, 510, 510);
-                    point.setPosition(rand.nextInt(506) + 2, rand.nextInt(500) + 10);
+                    point.setPosition(rand.nextInt(506) + 2, rand.nextInt(495) + 10);
                     repaint();
                 }
             }
@@ -62,7 +62,7 @@ public class GUIMyGame extends JFrame {
                 repaint();
                 if(catched()) {
                     GUIMyGame.super.getGraphics().clearRect(0, 0, 510, 510);
-                    point.setPosition(rand.nextInt(506) + 2, rand.nextInt(500) + 10);
+                    point.setPosition(rand.nextInt(506) + 2, rand.nextInt(495) + 10);
                     repaint();
                 }
             }
